@@ -112,6 +112,10 @@ set tags+=./.tags,.tags,~/.vim/stltags,~/.vim/wxwidgetstags,~/.vim/qt4tags
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
+"--------- delmitMate -------------------------------------------------------------------"
+" Make delimitMate handle newlines properly
+let delimitMate_expand_cr = 1
+
 "--------- yankring ---------------------------------------------------------------------"
 "Set the yankring file name
 let g:yankring_history_file = '.yankring_history'
