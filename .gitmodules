@@ -10,3 +10,6 @@
 [submodule "javascript"]
 	path = bundle/javascript
 	url = git@github.com:pangloss/vim-javascript.git
+[submodule "surround"]
+	path = bundle/surround
+	url = git@github.com:tpope/vim-surround.git
