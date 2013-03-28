@@ -42,8 +42,8 @@ set foldlevel=99
 
 " Indention settings
 "set cindent
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 " : = case in switch
 " g = protected/public/private
