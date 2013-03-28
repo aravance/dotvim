@@ -66,26 +66,6 @@ au BufRead,BufNewFile *.go         setlocal filetype=go
 
 nnoremap <silent><SPACE> :silent noh<BAR>echo<CR>
 
-" Complete parentheses, brackets, quotes, etc.
-"inoremap () ()
-"inoremap [] []
-"inoremap {} {}
-"inoremap (<BS> (<BS>
-"inoremap [<BS> [<BS>
-"inoremap {<BS> {<BS>
-"inoremap ( ()<LEFT>
-"inoremap [ []<LEFT>
-"inoremap { {}<LEFT>
-"inoremap (<CR> (<CR>)<ESC>O
-"inoremap [<CR> [<CR>]<ESC>O
-"inoremap {<CR> {<CR>}<ESC>O
-"vnoremap ( s()<ESC>P<RIGHT>
-"vnoremap [ s[]<ESC>P<RIGHT>
-"vnoremap { s{}<ESC>P<RIGHT>
-"vnoremap ' s''<ESC>P<RIGHT>
-"vnoremap " s""<ESC>P<RIGHT>
-"vnoremap ` s``<ESC>P<RIGHT>
-
 nnoremap <C-I> ==
 vnoremap <C-I> =
 nnoremap <C-/> <LEADER>c<SPACE>
