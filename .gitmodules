@@ -7,3 +7,6 @@
 [submodule "delimitMate"]
 	path = bundle/delimitMate
 	url = git@github.com:Raimondi/delimitMate.git
+[submodule "javascript"]
+	path = bundle/javascript
+	url = git@github.com:pangloss/vim-javascript.git

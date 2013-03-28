@@ -63,7 +63,6 @@ au BufRead,BufNewFile *.rl         setlocal filetype=ragel
 au BufRead,BufNewFile *.rb         setlocal filetype=ruby
 au BufRead,BufNewFile .bash*       setlocal filetype=sh
 au BufRead,BufNewFile *.go         setlocal filetype=go
-au BufRead,BufNewFile *.json       setlocal filetype=json
 
 nnoremap <silent><SPACE> :silent noh<BAR>echo<CR>
 
