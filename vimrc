@@ -1,4 +1,10 @@
-" 256 color syntax highlighting
+"--------- pathogen ---------------------------------------------------------------------"
+" Enable pathogen
+" NOTE: this must be done first
+call pathogen#incubate()
+call pathogen#helptags()
+
+ " 256 color syntax highlighting
 set t_Co=256
 syntax on
 colorscheme pablo
@@ -101,10 +107,8 @@ map <LEADER>jt  <ESC>:%!/opt/local/libexec/perl5.12/sitebin/json_xs -f json -t j
 map <LEADER>t :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 set tags+=./.tags,.tags,~/.vim/stltags,~/.vim/wxwidgetstags,~/.vim/qt4tags
 
-
-
 "--------- omnicppcompletion ------------------------------------------------------------"
-" This auto closes the window after an omnicppcompletion
+" Auto close the window after an omnicppcompletion
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
