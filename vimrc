@@ -4,6 +4,8 @@
 call pathogen#incubate()
 call pathogen#helptags()
 
+let mapleader = ","
+
  " 256 color syntax highlighting
 set t_Co=256
 syntax on
@@ -15,44 +17,45 @@ set nocompatible
 
 set nowrap
 set formatoptions=qrn1
-set nobackup
 set ttyfast
-set nocompatible
 
-let mapleader = ","
 set relativenumber
-set ignorecase
+
 set smartcase
 set incsearch
-set autoindent
+set hlsearch
+set gdefault
+
 set wildmenu
 set wildmode=list:longest
+
 set showmode
 set showcmd
 set showmatch
-set hlsearch
-set virtualedit=all
-set guioptions-=T
-set vb t_vb=
 set ruler
-set backspace=indent,eol,start
 set laststatus=2
+
+set virtualedit=all
+set vb t_vb=
+set backspace=indent,eol,start
+
+set scrolloff=3
+
 set foldmethod=syntax
 set foldlevel=99
 
-" Indention settings
-"set cindent
-set tabstop=2
-set shiftwidth=2
-set expandtab
+set tabstop=2 shiftwidth=2 expandtab
+
+set nobackup
+set undofile
+set undodir=~/.vim_undo
+
 " : = case in switch
 " g = protected/public/private
 " t = type for a function on different line
 " c,C = comment blocks and stuff
 " ( = after unclosed parenthesis
 set cino=:0,g0,t0,c0,C1,(0
-
-" Allow cursor roaming (outside of just the text)
 
 " Additional filetypes
 au BufRead,BufNewFile *.asm,*.ASM, setlocal filetype=ia64
@@ -77,7 +80,7 @@ nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k
 nnoremap <C-L> <C-W>l
 
-nnoremap <LEADER>W :%s/\s\+$//<cr>:let @/=''<CR>
+nnoremap <LEADER>w :%s/\s\+$//<cr>:let @/=''<CR>
 nnoremap <LEADER>ev <C-W><C-V><C-L>:e $MYVIMRC<CR>
 
 map <LEADER>jt  <ESC>:%!/opt/local/libexec/perl5.12/sitebin/json_xs -f json -t json-pretty<CR>
