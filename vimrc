@@ -5,7 +5,7 @@ colorscheme pablo
 
 " Turn on filetype recognition and indentation
 filetype plugin indent on
-set nocp
+set nocompatible
 
 set nowrap
 set formatoptions=qrn1
@@ -17,7 +17,6 @@ let mapleader = ","
 set relativenumber
 set ignorecase
 set smartcase
-set gdefault
 set incsearch
 set autoindent
 set wildmenu
@@ -34,23 +33,6 @@ set backspace=indent,eol,start
 set laststatus=2
 "set foldmethod=syntax
 "set foldlevel=0
-
-"Set the yankring file name
-let g:yankring_history_file = '.yankring_history'
-
-nnoremap <TAB> %
-vnoremap <TAB> %
-nnoremap <C-I> ==
-vnoremap <C-I> =
-nnoremap <C-/> ,c<SPACE>
-inoremap <C-/> <ESC>,c<SPACE>
-nnoremap <C-H> <C-W>h
-nnoremap <C-J> <C-W>j
-nnoremap <C-K> <C-W>k
-nnoremap <C-L> <C-W>l
-nnoremap <SPACE> :noh<CR>
-nnoremap <LEADER>W :%s/\s\+$//<cr>:let @/=''<CR>
-nnoremap <LEADER>ev <C-W><C-V><C-L>:e $MYVIMRC<cr>
 
 " Indention settings
 "set cindent
@@ -77,37 +59,55 @@ au BufRead,BufNewFile .bash*       setlocal filetype=sh
 au BufRead,BufNewFile *.go         setlocal filetype=go
 au BufRead,BufNewFile *.json       setlocal filetype=json
 
-" Set the c compiler in c-support to c99
-"let g:C_CCompiler="gcc --std=c99"
+nnoremap <silent><SPACE> :silent noh<BAR>echo<CR>
+
+" Complete parentheses, brackets, quotes, etc.
+"inoremap () ()
+"inoremap [] []
+"inoremap {} {}
+"inoremap (<BS> (<BS>
+"inoremap [<BS> [<BS>
+"inoremap {<BS> {<BS>
+"inoremap ( ()<LEFT>
+"inoremap [ []<LEFT>
+"inoremap { {}<LEFT>
+"inoremap (<CR> (<CR>)<ESC>O
+"inoremap [<CR> [<CR>]<ESC>O
+"inoremap {<CR> {<CR>}<ESC>O
+"vnoremap ( s()<ESC>P<RIGHT>
+"vnoremap [ s[]<ESC>P<RIGHT>
+"vnoremap { s{}<ESC>P<RIGHT>
+"vnoremap ' s''<ESC>P<RIGHT>
+"vnoremap " s""<ESC>P<RIGHT>
+"vnoremap ` s``<ESC>P<RIGHT>
+
+nnoremap <C-I> ==
+vnoremap <C-I> =
+nnoremap <C-/> <LEADER>c<SPACE>
+inoremap <C-/> <ESC><LEADER>c<SPACE>
+
+" Window navigation
+nnoremap <C-H> <C-W>h
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-L> <C-W>l
+
+nnoremap <LEADER>W :%s/\s\+$//<cr>:let @/=''<CR>
+nnoremap <LEADER>ev <C-W><C-V><C-L>:e $MYVIMRC<CR>
+
+map <LEADER>jt  <ESC>:%!/opt/local/libexec/perl5.12/sitebin/json_xs -f json -t json-pretty<CR>
 
 " Used to build a tag database for autocompletion in the current directory
 map <LEADER>t :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 set tags+=./.tags,.tags,~/.vim/stltags,~/.vim/wxwidgetstags,~/.vim/qt4tags
 
-" Complete parentheses, brackets, quotes, etc.
-inoremap () ()
-inoremap [] []
-inoremap {} {}
-inoremap (<BS> (<BS>
-inoremap [<BS> [<BS>
-inoremap {<BS> {<BS>
-inoremap ( ()<LEFT>
-inoremap [ []<LEFT>
-inoremap { {}<LEFT>
-inoremap (<CR> (<CR>)<ESC>O
-inoremap [<CR> [<CR>]<ESC>O
-inoremap {<CR> {<CR>}<ESC>O
 
-vnoremap ( s()<ESC>P<RIGHT>
-vnoremap [ s[]<ESC>P<RIGHT>
-vnoremap { s{}<ESC>P<RIGHT>
-vnoremap ' s''<ESC>P<RIGHT>
-vnoremap " s""<ESC>P<RIGHT>
-vnoremap ` s``<ESC>P<RIGHT>
 
-map <LEADER>jt  <ESC>:%!/opt/local/libexec/perl5.12/sitebin/json_xs -f json -t json-pretty<CR>
-
+"--------- omnicppcompletion ------------------------------------------------------------"
 " This auto closes the window after an omnicppcompletion
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
-autocmd InsertLeave * if pumvisible() == 0|pclose|endif 
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
+"--------- yankring ---------------------------------------------------------------------"
+"Set the yankring file name
+let g:yankring_history_file = '.yankring_history'
