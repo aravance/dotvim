@@ -37,8 +37,8 @@ set vb t_vb=
 set ruler
 set backspace=indent,eol,start
 set laststatus=2
-"set foldmethod=syntax
-"set foldlevel=0
+set foldmethod=syntax
+set foldlevel=99
 
 " Indention settings
 "set cindent
