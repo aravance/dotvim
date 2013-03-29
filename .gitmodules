@@ -19,3 +19,6 @@
 [submodule "repeat"]
 	path = bundle/repeat
 	url = git@github.com:tpope/vim-repeat.git
+[submodule "tagbar"]
+	path = bundle/tagbar
+	url = git@github.com:majutsushi/tagbar.git
