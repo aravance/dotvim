@@ -22,3 +22,6 @@
 [submodule "tagbar"]
 	path = bundle/tagbar
 	url = git@github.com:majutsushi/tagbar.git
+[submodule "clang"]
+	path = bundle/clang
+	url = git@github.com:Rip-Rip/clang_complete.git
