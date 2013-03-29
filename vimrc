@@ -85,15 +85,6 @@ nnoremap <LEADER>ev <C-W><C-V><C-L>:e $MYVIMRC<CR>
 
 map <LEADER>jt  <ESC>:%!/opt/local/libexec/perl5.12/sitebin/json_xs -f json -t json-pretty<CR>
 
-" Used to build a tag database for autocompletion in the current directory
-map <LEADER>t :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
-set tags+=./.tags,.tags,~/.vim/stltags,~/.vim/wxwidgetstags,~/.vim/qt4tags
-
-"--------- omnicppcompletion ------------------------------------------------------------"
-" Auto close the window after an omnicppcompletion
-autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
-autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-
 "--------- delmitMate -------------------------------------------------------------------"
 " Make delimitMate handle newlines properly
 let delimitMate_expand_cr = 1
