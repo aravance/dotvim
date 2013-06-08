@@ -50,6 +50,8 @@ set nobackup
 set undofile
 set undodir=~/.vim_undo
 
+set diffopt+=iwhite
+
 " : = case in switch
 " g = protected/public/private
 " t = type for a function on different line
