@@ -60,14 +60,15 @@ set diffopt+=iwhite
 set cino=:0,g0,t0,c0,C1,(0
 
 " Additional filetypes
-au BufRead,BufNewFile *.asm,*.ASM, setlocal filetype=ia64
-au BufRead,BufNewFile *.s,*.S      setlocal filetype=gas
-au BufRead,BufNewFile *.cls        setlocal filetype=tex
-au BufRead,BufNewFile sconstruct   setlocal filetype=python
-au BufRead,BufNewFile *.rl         setlocal filetype=ragel
-au BufRead,BufNewFile *.rb         setlocal filetype=ruby
-au BufRead,BufNewFile .bash*       setlocal filetype=sh
-au BufRead,BufNewFile *.go         setlocal filetype=go
+au BufRead,BufNewFile *.asm,*.ASM,             setlocal filetype=ia64
+au BufRead,BufNewFile *.s,*.S                  setlocal filetype=gas
+au BufRead,BufNewFile *.cls                    setlocal filetype=tex
+au BufRead,BufNewFile sconstruct               setlocal filetype=python
+au BufRead,BufNewFile *.rl                     setlocal filetype=ragel
+au BufRead,BufNewFile *.rb                     setlocal filetype=ruby
+au BufRead,BufNewFile .bash*                   setlocal filetype=sh
+au BufRead,BufNewFile *.go                     setlocal filetype=go
+au BufRead,BufNewFile *.gradle,gradle.settings setlocal filetype=groovy
 
 nnoremap <silent><SPACE> :silent noh<BAR>echo<CR>
 
