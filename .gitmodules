@@ -31,3 +31,6 @@
 [submodule "unimpaired"]
 	path = bundle/unimpaired
 	url = git://github.com/tpope/vim-unimpaired.git
+[submodule "speeddating"]
+	path = bundle/speeddating
+	url = git://github.com/tpope/vim-speeddating.git
