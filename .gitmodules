@@ -25,3 +25,6 @@
 [submodule "clang"]
 	path = bundle/clang
 	url = git@github.com:Rip-Rip/clang_complete.git
+[submodule "abolish"]
+	path = bundle/abolish
+	url = git://github.com/tpope/vim-abolish.git
