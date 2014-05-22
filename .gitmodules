@@ -4,6 +4,7 @@
 [submodule "yankring"]
 	path = bundle/yankring
 	url = git@github.com:vim-scripts/YankRing.vim.git
+  ignore = untracked
 [submodule "delimitMate"]
 	path = bundle/delimitMate
 	url = git@github.com:Raimondi/delimitMate.git
