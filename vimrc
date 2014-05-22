@@ -1,7 +1,7 @@
 "--------- pathogen ---------------------------------------------------------------------"
 " Enable pathogen
 " NOTE: this must be done first
-call pathogen#incubate()
+call pathogen#infect('bundle/{}')
 call pathogen#helptags()
 
 let mapleader = ","
