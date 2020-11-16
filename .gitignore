@@ -1,4 +1,6 @@
 # temporary files
 .*.swp
 .netrwhist
+plugged
+autoload/plug.vim
 
