@@ -95,6 +95,8 @@ nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k
 nnoremap <C-L> <C-W>l
 
+cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
+
 nnoremap <LEADER>w :%s/\s\+$//<cr>:let @/=''<CR>
 nnoremap <LEADER>ev <C-W><C-V><C-L>:e $MYVIMRC<CR>
 
